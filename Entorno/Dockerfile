@@ -22,4 +22,4 @@ COPY . .
 ENV FLET_FORCE_WEB_SERVER=true
 ENV FLET_SERVER_PORT=8550
 
-CMD ["python", "src/app.py"]
+CMD ["sh", "-c", "pytest && flet run main.py --web --port 8080"]
